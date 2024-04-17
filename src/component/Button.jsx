@@ -6,9 +6,9 @@ const Button = (props) => {
 
   return (
     <button
-      style={{ background: color }}
+      style={{ background: color, boxShadow: `0 0 1rem 0px ${color}` }}
       disabled={isDisable}
-      className="d-inline-block btn btn-primary border-0 mx-2 px-4 py-2 text-uppercase"
+      className={`btn btn-primary h-100 w-100 py-2 px-3 border-0 text-wrap fs-6 text-capitalize ${isDisable ? 'shadow-none':''}`}
       onClick={() => setDataImg(data)}
     >
       {data.title}

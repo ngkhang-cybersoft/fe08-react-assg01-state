@@ -35,14 +35,16 @@ const App = () => {
         <div className="col-7">
           <View content={dataImg} />
         </div>
-        <div className="col-5 d-flex">
+        <div className="col-5 container">
+          <div className="row">
           {listProd.map((item) => {
             return (
-              <div key={item.id}>
+              <div className='col-12 col-md-4 mb-2 mb-md-0 rounded' key={item.id} >
                 <Button data={item} setDataImg={setDataImg} isDisable={item.id === dataImg.id} />
               </div>
             );
           })}
+          </div>
         </div>
       </div>
     </div>
